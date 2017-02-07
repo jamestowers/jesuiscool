@@ -1,0 +1,463 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: IE Stylesheet
+
+So instead of using the respond.js file to add media query support
+to IE, we're going to use SASS to create an easily readable css file.
+Here, we import all the styles the standard stylesheet gets, only
+without the media queries. No need to worry about editing anything!
+
+******************************************************************/
+/*
+Remember, all the BASE styles are called already since IE can
+read those. Below, we need to import only the stuff IE can't 
+understand (what's inside the media queries). We also need to
+import the mixins file so SASS can understand the variables.
+*/
+/* import mixins */
+@-webkit-keyframes animate-from-top {
+  /* line 61, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); }
+
+  /* line 64, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); } }
+@keyframes animate-from-top {
+  /* line 61, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); }
+
+  /* line 64, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); } }
+
+@-webkit-keyframes shake {
+  /* line 70, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  0% {
+    -webkit-transform: translate(2px, 1px) rotate(0deg);
+            transform: translate(2px, 1px) rotate(0deg); }
+
+  /* line 71, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+            transform: translate(-1px, -2px) rotate(-1deg); }
+
+  /* line 72, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg);
+            transform: translate(-3px, 0px) rotate(1deg); }
+
+  /* line 73, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  30% {
+    -webkit-transform: translate(0px, 2px) rotate(0deg);
+            transform: translate(0px, 2px) rotate(0deg); }
+
+  /* line 74, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg);
+            transform: translate(1px, -1px) rotate(1deg); }
+
+  /* line 75, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+            transform: translate(-1px, 2px) rotate(-1deg); }
+
+  /* line 76, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            transform: translate(-3px, 1px) rotate(0deg); }
+
+  /* line 77, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  70% {
+    -webkit-transform: translate(2px, 1px) rotate(-1deg);
+            transform: translate(2px, 1px) rotate(-1deg); }
+
+  /* line 78, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+            transform: translate(-1px, -1px) rotate(1deg); }
+
+  /* line 79, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  90% {
+    -webkit-transform: translate(2px, 2px) rotate(0deg);
+            transform: translate(2px, 2px) rotate(0deg); }
+
+  /* line 80, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+            transform: translate(1px, -2px) rotate(-1deg); } }
+
+@keyframes shake {
+  /* line 70, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  0% {
+    -webkit-transform: translate(2px, 1px) rotate(0deg);
+            transform: translate(2px, 1px) rotate(0deg); }
+
+  /* line 71, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+            transform: translate(-1px, -2px) rotate(-1deg); }
+
+  /* line 72, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg);
+            transform: translate(-3px, 0px) rotate(1deg); }
+
+  /* line 73, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  30% {
+    -webkit-transform: translate(0px, 2px) rotate(0deg);
+            transform: translate(0px, 2px) rotate(0deg); }
+
+  /* line 74, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg);
+            transform: translate(1px, -1px) rotate(1deg); }
+
+  /* line 75, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+            transform: translate(-1px, 2px) rotate(-1deg); }
+
+  /* line 76, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            transform: translate(-3px, 1px) rotate(0deg); }
+
+  /* line 77, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  70% {
+    -webkit-transform: translate(2px, 1px) rotate(-1deg);
+            transform: translate(2px, 1px) rotate(-1deg); }
+
+  /* line 78, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+            transform: translate(-1px, -1px) rotate(1deg); }
+
+  /* line 79, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  90% {
+    -webkit-transform: translate(2px, 2px) rotate(0deg);
+            transform: translate(2px, 2px) rotate(0deg); }
+
+  /* line 80, /Applications/MAMP/htdocs/jesuiscool/library/scss/variables */
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+            transform: translate(1px, -2px) rotate(-1deg); } }
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Grid Stylesheet
+
+I've seperated the grid so you can swap it out easily. It's
+called at the top the style.scss stylesheet.
+
+There are a ton of grid solutions out there. You should definitely
+experiment with your own. Here are some recommendations:
+
+http://gridsetapp.com - Love this site. Responsive Grids made easy.
+http://susy.oddbird.net/ - Grids using Compass. Very elegant.
+http://gridpak.com/ - Create your own responsive grid.
+
+The grid below is a combination of the 1140 grid and Twitter Boostrap. 
+I liked 1140 but Boostrap's grid was way more detailed so I merged them 
+together, let's see how this works out. If you want to use 1140, the original 
+values are commented out on each line.
+
+******************************************************************/
+/*************************
+BIG MARGIN
+**************************/
+/*
+.col1    { width: 5.801104972%;  }   
+.col2    { width: 14.364640883%; } 
+.col3  { width: 22.928176794%; }  
+.col4   { width: 31.491712705%; }
+.col5   { width: 40.055248616%; }
+.col6    { width: 48.618784527%; }   
+.col7  { width: 57.182320438000005%; } 
+.col8  { width: 65.74585634900001%; } 
+.col9   { width: 74.30939226%; }  
+.col10    { width: 82.87292817100001%; }
+.col11 { width: 91.436464082%; }
+.col12 { width: 99.999999993%; } 
+
+// layout & column defaults
+[class^="col"], [class*=" col"] {
+  position: relative;
+  float: left;
+  margin-right: 2.762430939%;
+}
+
+.last {
+  float: right;
+  margin-right: 0;
+}
+*/
+/*************************
+SMALL MARGIN
+**************************/
+/* line 60, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+.col1 {
+  width: 7.33333%; }
+
+/* line 61, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+.col2 {
+  width: 15.666666667%; }
+
+/* line 62, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+.col3 {
+  width: 24%; }
+
+/* line 63, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+.col4 {
+  width: 32.333333%; }
+
+/* line 64, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+.col5 {
+  width: 40.666666667%; }
+
+/* line 65, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+.col6 {
+  width: 49%; }
+
+/* line 66, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+.col7 {
+  width: 57.33333337%; }
+
+/* line 67, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+.col8 {
+  width: 65.666666667%; }
+
+/* line 68, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+.col9 {
+  width: 74%; }
+
+/* line 69, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+.col10 {
+  width: 82.3333333%; }
+
+/* line 70, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+.col11 {
+  width: 90.96666667%; }
+
+/* line 71, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+.col12 {
+  width: 100%; }
+
+/* line 74, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+[class^="col"], [class*=" col"] {
+  position: relative;
+  float: left;
+  margin-right: 1%; }
+
+/* line 80, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+.last {
+  margin-right: 0; }
+  /* line 82, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+  .last.col1 {
+    width: 8.33333%; }
+  /* line 83, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+  .last.col2 {
+    width: 16.666666667%; }
+  /* line 84, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+  .last.col3 {
+    width: 25%; }
+  /* line 85, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+  .last.col4 {
+    width: 33.333333%; }
+  /* line 86, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+  .last.col5 {
+    width: 41.666666667%; }
+  /* line 87, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+  .last.col6 {
+    width: 50%; }
+  /* line 88, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+  .last.col7 {
+    width: 58.33333337%; }
+  /* line 89, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+  .last.col8 {
+    width: 66.666666667%; }
+  /* line 90, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+  .last.col9 {
+    width: 75%; }
+  /* line 91, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+  .last.col10 {
+    width: 83.3333333%; }
+  /* line 92, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+  .last.col11 {
+    width: 91.96666667%; }
+  /* line 93, /Applications/MAMP/htdocs/jesuiscool/library/scss/grid */
+  .last.col12 {
+    width: 100%; }
+
+/*************************
+NO MARGIN
+**************************/
+/*
+.col1    { width: 8.33333%;  }    
+.col2    { width: 16.6666666667%; }   
+.col3    { width: 25%; }  
+.col4    { width: 33.333333%; }  
+.col5    { width: 41.6666666667%; } 
+.col6    { width: 50%; }  
+.col7    { width: 58.33333337%; }
+.col8    { width: 66.666666667%; } 
+.col9    { width: 75%; } 
+.col10   { width: 83.3333333%; }  
+.col11   { width: 91.96666667%; }  
+.col12   { width: 100%; } 
+
+// layout & column defaults
+[class^="col"], [class*=" col"] {
+  position: relative;
+  float: left;
+}
+
+.last {
+  float: right;
+}
+*/
+/* line 1, /Applications/MAMP/htdocs/jesuiscool/library/scss/768up */
+.hide-on-mobile {
+  display: inline;
+  visibility: visible; }
+
+/* line 6, /Applications/MAMP/htdocs/jesuiscool/library/scss/768up */
+.pad {
+  padding: 20px 0 20px 0; }
+
+/*********************
+HEADER STYLES
+*********************/
+/* line 15, /Applications/MAMP/htdocs/jesuiscool/library/scss/768up */
+header.header #logo {
+  height: 200px; }
+
+/*********************
+NAVIGATION STYLES
+*********************/
+/* line 30, /Applications/MAMP/htdocs/jesuiscool/library/scss/768up */
+a#menu-toggle {
+  display: none; }
+
+/* line 33, /Applications/MAMP/htdocs/jesuiscool/library/scss/768up */
+nav {
+  font-size: 0px;
+  font-size: 0rem; }
+  /* line 35, /Applications/MAMP/htdocs/jesuiscool/library/scss/768up */
+  nav#nav-header li {
+    border-bottom: none; }
+    /* line 37, /Applications/MAMP/htdocs/jesuiscool/library/scss/768up */
+    nav#nav-header li a {
+      color: #222;
+      font-size: 15px;
+      font-size: 1.5rem; }
+  /* line 44, /Applications/MAMP/htdocs/jesuiscool/library/scss/768up */
+  nav#nav-footer a {
+    font-size: 12px;
+    font-size: 1.2rem; }
+  /* line 49, /Applications/MAMP/htdocs/jesuiscool/library/scss/768up */
+  nav li {
+    display: inline-block;
+    vertical-align: top; }
+    /* line 52, /Applications/MAMP/htdocs/jesuiscool/library/scss/768up */
+    nav li a {
+      font-size: 14px;
+      font-size: 1.4rem; }
+
+/*********************
+HERO
+*********************/
+/* line 69, /Applications/MAMP/htdocs/jesuiscool/library/scss/768up */
+.hero-container {
+  min-height: 400px;
+  width: 100%; }
+
+/* line 73, /Applications/MAMP/htdocs/jesuiscool/library/scss/768up */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto; }
+  /* line 86, /Applications/MAMP/htdocs/jesuiscool/library/scss/768up */
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+/*********************
+WIDGETS
+*********************/
+/* line 105, /Applications/MAMP/htdocs/jesuiscool/library/scss/768up */
+div#footer-asides {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  /* line 107, /Applications/MAMP/htdocs/jesuiscool/library/scss/768up */
+  div#footer-asides aside {
+    background: #6E6E6E;
+    color: #373737;
+    border-bottom: none; }
+    /* line 111, /Applications/MAMP/htdocs/jesuiscool/library/scss/768up */
+    div#footer-asides aside:not(:last-child) {
+      border-right: 1px solid #555; }
+    /* line 114, /Applications/MAMP/htdocs/jesuiscool/library/scss/768up */
+    div#footer-asides aside .widgettitle {
+      color: #FFF; }
+
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop. 
+
+******************************************************************/
+/*********************
+HERO
+*********************/
+/* line 17, /Applications/MAMP/htdocs/jesuiscool/library/scss/1030up */
+.hero-container {
+  min-height: 500px; }
+
+/* 
+you can call the larger styles if you want, but there's really no need 
+*/
+/******************************************************************
+ADDITIONAL IE FIXES
+These fixes are now ONLY seen by IE, so you don't have to worry
+about using prefixes, although it's best practice. For more info
+on using Modernizr classes, check out this link:
+http://www.modernizr.com/docs/
+******************************************************************/
+/*
+For example, you can use something like:
+
+.no-textshadow .class { ... }
+
+You can also target specific versions by using the classes applied to
+the html element. These can sometimes change, so take a look inside the
+header.php file to see what they are:
+
+
+.lt-ie8 .class { ... }
+
+*/
