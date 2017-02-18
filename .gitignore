@@ -1,3 +1,4 @@
 
 library/scss/*
 library/coffee/*
+node_modules/
