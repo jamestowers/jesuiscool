@@ -25,7 +25,7 @@
 			
 			<div class="text-center buy-button">	
 				<a href="https://www.paypal.com/cgi-bin/webscr?business=harry@harryosborne.co.uk&cmd=_xclick&currency_code=GBP&amount=78&item_name=Je%20Suis%20Cool%20Pina%20Colada%20Jersey" class="btn btn-full-width" target="_blank">Pre-Order Jersey</a>
-				<span>£60 delivered</span>
+				<span>£78 delivered</span>
 			</div>
 
 			<p>- Pre-order closes midnight 19th February. Kits will be delivered Mid April</p>
